@@ -1,9 +1,10 @@
-package main 
+package main
 
 // import "math"
 import "fmt"
 import "time"
 import "strconv"
+
 // import "net/http"
 // import "strconv"
 // import "os"
@@ -11,15 +12,15 @@ import "strconv"
 // import "io/ioutil"
 // import "strings"
 // import "sort"
-// import ("fmt" 
-// "strings" 
-// "sort" 
-// "os" 
-// "log" 
-// "io/ioutil" 
+// import ("fmt"
+// "strings"
+// "sort"
+// "os"
+// "log"
+// "io/ioutil"
 // "strconv")
 // godoc : package name / function
-// godoc fmt Printlin
+// godoc fmt Printliu
 
 // variables inside a go is statically typed / type can't change once it's defined
 // vars may be: ljljajlaksdll3242____
@@ -48,7 +49,7 @@ import "strconv"
 // 	return finalValue
 // }
 
-// Факториа́л — функция, определённая на множестве неотрицательных целых чисел. 
+// Факториа́л — функция, определённая на множестве неотрицательных целых чисел.
 // Факториал натурального числа n определяется как произведение всех натуральных чисел от 1 до n включительно:
 // you just to have to stare at it a little bit and eventually it just makes sense
 // func factorial(num int) int{
@@ -92,7 +93,7 @@ import "strconv"
 // referenced by the pointer
 // func changeXValNow(x *int) {
 // 	// store 2 in the memmory address that x refers to
-// 	// x has nothing to do with the value anymore 
+// 	// x has nothing to do with the value anymore
 // 	// it actually deals with the actual variable
 // 	*x = 2
 // }
@@ -113,17 +114,17 @@ import "strconv"
 // 	return rect.width * rect.height
 // }
 
-// interfaces and usage a sort of polymorphism 
+// interfaces and usage a sort of polymorphism
 // inside of go
 // type Shape interface {
 // 	area() float64
 // }
 // type Rectangle struct {
-// 	height float64	
-// 	width float64	
+// 	height float64
+// 	width float64
 // }
 // type Circle struct {
-// 	radius float64	
+// 	radius float64
 // }
 
 // func (r Rectangle) area() float64 {
@@ -172,7 +173,7 @@ func makeDough(stringChan chan string) {
 }
 
 func addSauce(stringChan chan string) {
-	pizza := <- stringChan
+	pizza := <-stringChan
 	fmt.Println("Add Sauce and Send", pizza, "for toppings")
 
 	stringChan <- pizzaName
@@ -181,7 +182,7 @@ func addSauce(stringChan chan string) {
 }
 
 func addToppings(stringChan chan string) {
-	pizza := <- stringChan
+	pizza := <-stringChan
 	fmt.Println("Add Toppings to", pizza, "and ship")
 
 	time.Sleep(time.Millisecond * 10)
@@ -260,7 +261,7 @@ func main() {
 	// fmt.Println("Circle Area =", getArea(circ))
 
 	// strucks are going to provide us with a way
-	// to define our own datatypes 
+	// to define our own datatypes
 	// rect1 := Rectangle{leftX: 0, topY:50, height: 10, width: 10}
 	// or
 	// rect1 := Rectangle{0, 50, 10, 10}
@@ -274,7 +275,7 @@ func main() {
 	// fmt.Println("y =", *yPtr)
 
 	// x := 0
-	// here we pass reference of the value, not the value itself 
+	// here we pass reference of the value, not the value itself
 	// that is the power that we get with pointers
 	// we actually allowed to pass the actual memory address in
 	// and the assign a value to that memory address rather than
@@ -311,7 +312,7 @@ func main() {
 	// num1, num2 := next2Values(5)
 	// fmt.Println(num1, num2)
 
-	// listNumbers := []float64 {1,2,3,4,5}	
+	// listNumbers := []float64 {1,2,3,4,5}
 
 	// fmt.Println("Sum:", addThemUp(listNumbers))
 
@@ -331,7 +332,7 @@ func main() {
 
 	// ********* logical operaitor // start
 
-	// slice is like an array but whenever you define them you leave out the size	
+	// slice is like an array but whenever you define them you leave out the size
 	// numSlice := []int {5,4,3,2,1}
 	// slice of array type with initial value - zero, length - 10
 	// numSlice3 := make([]int, 5, 10);
@@ -395,7 +396,7 @@ func main() {
 
 	// for j := 0; j < 5; j++ {
 	// 	fmt.Println(j)
-	// }	
+	// }
 
 	// logical operators
 
@@ -410,7 +411,6 @@ func main() {
 	// fmt.Println("!true =", !true)
 
 	// ********* logical operaitor // end
-
 
 	// ********* println, printf // primitive datatypes // start
 
@@ -427,9 +427,9 @@ func main() {
 	// fmt.Printf("%b \n", 100);
 	// for character code of...
 	// fmt.Printf("%c \n", 44);
-	// for hex code 
+	// for hex code
 	// fmt.Printf("%x \n", 17);
-	// for scientific notation 
+	// for scientific notation
 	// fmt.Printf("%e \n", pi);
 
 	// const pi float64 = 3.14159265
@@ -454,8 +454,8 @@ func main() {
 	// var age int = 40;
 	// var favNum float64 = 1.6180339
 	// randNum := 1
-	
-	// var numOne = 1.000	
+
+	// var numOne = 1.000
 	// var num99 = .9999
 
 	// fmt.Println("6 + 4 = ", 6 + 4)
